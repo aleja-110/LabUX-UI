@@ -1,0 +1,77 @@
+/*todas las etiquetas*/
+*{
+    /*margenes*/
+    margin: 0;
+    /*relleno (margen interna)*/
+    padding: 0;
+    /*evita sumar anchos al relleno*/
+    box-sizing: border-box;
+}
+
+/*asignar estilo a los contenedores principales*/
+body{
+    /*color URL top left patron*/
+    background: url(Assets/imagen-back.jpg) 0 0 no-repeat;
+    background-size: cover;
+
+    /*manejo de color
+       -hexadecimal: #000;
+       -nombre de color: black;
+       -rgb: rgb(0,0,0);
+       -rgba: rgba(0,0,0,1); alpha
+     */
+}
+
+main{
+    /*fondo con alpha*/
+    background: rgba(0, 0, 0, 0.8);
+    /*ancho*/
+    width: 100%;
+    max-width: 650px;
+    /*centrar el contenedor*/
+    margin: 0 auto;
+    /*relleno (margen interna)*/
+    padding: 10px;
+}
+
+/*Estilos de titulos*/
+
+h1{
+    /*color fuente*/
+    color: rgb(179, 64, 102);
+    /*tamaño de fuente*/
+    font-size: 54px;
+    /*familia tipografica*/
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2{
+    color: antiquewhite;
+    font-size: 34px;
+    font-family: "Orelega One", serif;
+    font-weight: 500;
+    font-style: normal;
+    /*margenes*/
+    margin: 10px 0;
+}
+
+/*estilos de parrafos*/
+.parrafo-pink{
+    margin: 10px 0;
+    color: antiquewhite;
+    font-size: 14px;
+    /*altura de linea*/
+    line-height: 16px;
+    /*justificar-alinear texto*/
+    text-align: left;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*imagenes*/
+img{
+    width: 100%;
+}
