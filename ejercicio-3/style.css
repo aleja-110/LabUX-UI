@@ -1,0 +1,186 @@
+/* INDICE DE ESTILOS 
+0. Generales /
+1. Tipografias
+2. Header / cabecera
+3. Enlaces / Botones
+4. Areas destacadas
+*/
+
+/*  0. Generales / colores */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-principal: #204CB2;
+    --color-acento: #B28620;
+    --color-terciario: #573ebd;
+    --color-texto: #0e0e11;
+}
+
+
+/* 1. Tipografias */
+
+.titulo-principal{
+    font-family: "Caacupe One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-principal);
+    font-size: 28px;
+}
+
+.titulo-secundario{
+    font-family: "Caacupe One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-principal);
+    font-size: 22px;
+}
+
+.parrafo{
+     font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-texto);
+    font-size: 14px;
+}
+.texto-oculto{
+    display: none;
+    /*asegurase que no se vea*/
+    opacity: 0;
+    position: absolute;
+    top: -5000px;
+}
+
+/* 2. Header/cabecera */
+
+#cabecera-principal{
+    margin: 5px;
+    padding: 20px 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    /* borde: grosor tipo color; */
+    border-bottom: 3px solid var(--color-principal);
+}
+
+/* 3. Enlaces / Botones */
+
+.boton-principal{
+    /*fuente*/
+    font-family: "Caacupe One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-principal);
+    font-size: 18px;
+    /* quito linea inferior */
+    text-decoration: none;
+    /* asigno cuerpo por medio del relleno */
+    padding: 8px 15px;
+    /* animo el paso del mouse */
+    transition: all linear 0.3s;
+    /* redondeo bordes */
+    border-radius: 3px;
+}
+
+.boton-principal:hover{
+    color: #B28620;
+    background-color: var(--color-principal);
+}
+
+.boton-secundario{
+    /*fuente*/
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--color-principal);
+    font-size: 12px;
+    /* quito linea inferior */
+    text-decoration: none;
+    /* asigno cuerpo por medio del relleno */
+    padding: 8px 5px;
+    /* animo el paso del mouse */
+    transition: all linear 0.3s;
+    /* redondeo bordes */
+    border-radius: 3px;
+}
+
+.boton-secundario:hover{
+    color: #B28620;
+    background-color: var(--color-principal);
+}
+
+
+/* 4. Areas destacadas */
+#area-destacadas{
+    margin: 10px;
+    padding: 20px 10px;  
+}
+
+.element-row{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.element-row article{
+    flex: 1;
+    min-width: 0;
+    margin: 10px 0;
+}
+
+.element-row article img {
+    margin: 10px 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.element-row h3 {
+    margin-bottom: 3px;
+}
+
+.element-row .parrafo {
+    margin-bottom: 15px;
+}
+
+.element-row .boton-secundario {
+    margin-top: 5px;
+}
+
+/* responsive */
+@media only screen and (max-width: 700px) {
+    #cabecera-principal{
+       flex-direction: column;
+       padding: 20px 0;
+    }
+
+    nav[role=navigation]{
+        width: 100%;
+    }
+
+    .boton-principal{
+        /* se comporte como bloque*/
+        display: block;
+        /*ancho*/
+        width: 100%;
+        /*margen*/
+        margin: 5px 2% 0 2%;
+        /*alinear centro*/
+        text-align: center;
+        /*borde inferior*/
+        border-bottom: 1px solid var(--color-principal);
+        border-radius: 3px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .element-row{
+        flex-direction: column;
+    }
+}
